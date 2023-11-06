@@ -242,13 +242,13 @@ class MambaAccountDB:
         two_fa_code = random.randint(100000, 999999)
         # generates a random code for the 2FA
 
-        account_sid = "YOUR SID"
-        auth_token = "YOUR TOKEN"
+        account_sid = "YOUR_SID"
+        auth_token = "YOUR_TOKEN"
         client = Client(account_sid, auth_token)
         # twilio account details required to connect to the module, client class from twilio.rest is instantiated
         client.messages.create(
             to=mamba_account_phone_number,
-            from_="+447577338466",
+            from_="+YOUR_TWILIO_NUMBER",
             body=f"""Hey there, {mamba_account_username}, here's your 2FA code to delete your Mamba account: {two_fa_code}. 
             If you aren't the owner of this account, please ignore this message.""",
         )
@@ -304,13 +304,13 @@ class MambaAccountDB:
         two_fa_code = random.randint(100000, 999999)
         # generates a random code for the 2FA
 
-        account_sid = "YOUR SID"
-        auth_token = "YOUR TOKEN"
+        account_sid = "YOUR_SID"
+        auth_token = "YOUR_TOKEN"
         client = Client(account_sid, auth_token)
 
         client.messages.create(
             to=mamba_account_phone_number,
-            from_="+447577338466",
+            from_="+YOUR_TWILIO_NUMBER",
             body=f"""Hey {mamba_account_username}, your 2FA code to change your Mamba password is: {two_fa_code}. If
             you didn't aren't the owner of this account, please ignore this message.""",
         )
