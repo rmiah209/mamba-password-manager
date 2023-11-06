@@ -242,8 +242,8 @@ class MambaAccountDB:
         two_fa_code = random.randint(100000, 999999)
         # generates a random code for the 2FA
 
-        account_sid = "ACda699751edd6cd9015a962e40800773a"
-        auth_token = "a01cb87921a4a197bca7d03e8c9b2559"
+        account_sid = "YOUR SID"
+        auth_token = "YOUR TOKEN"
         client = Client(account_sid, auth_token)
         # twilio account details required to connect to the module, client class from twilio.rest is instantiated
         client.messages.create(
@@ -304,8 +304,8 @@ class MambaAccountDB:
         two_fa_code = random.randint(100000, 999999)
         # generates a random code for the 2FA
 
-        account_sid = "ACda699751edd6cd9015a962e40800773a"
-        auth_token = "a01cb87921a4a197bca7d03e8c9b2559"
+        account_sid = "YOUR SID"
+        auth_token = "YOUR TOKEN"
         client = Client(account_sid, auth_token)
 
         client.messages.create(
@@ -344,7 +344,3 @@ class MambaAccountDB:
 # instantiate the 'MambaAccountDB' class object
 account_db = MambaAccountDB()
 
-# call and create the account database
-account_db.create_mamba_account(
-    username="test2", password="liverp00lA321-", phone_number="+447882105845"
-)
